@@ -1,134 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dino | Cloud Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dino | Cloud Engineer</title>
 
-    header {
-      text-align: center;
-      padding: 60px 20px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
 
-    header p {
-      color: #94a3b8;
-    }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
 
-    h2 {
-      border-bottom: 2px solid #38bdf8;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
+header h1 {
+  font-size: 2.8rem;
+}
 
-    .skills span {
-      display: inline-block;
-      background: #1e293b;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 5px;
-    }
+header p {
+  font-size: 1.2rem;
+  color: #94a3b8;
+}
 
-    .project {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
+h2 {
+  border-left: 5px solid #38bdf8;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #64748b;
-    }
-  </style>
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.skills span {
+  display: inline-block;
+  background: #334155;
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
+<header class="fade">
   <h1>Dino Giftlin Daniel</h1>
-  <p>Aspiring Cloud Engineer | AWS | Docker | DevOps</p>
+  <p>Cloud & DevOps Engineer | AWS | Docker | CI/CD | Building Scalable Applications</p>
 </header>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    I am an aspiring Cloud Engineer with knowledge in AWS, Docker, and CI/CD tools.
-    I enjoy building and deploying applications and continuously improving my skills
-    in cloud technologies.
-  </p>
+<div style="text-align:center;" class="fade">
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+       style="width:90%; max-width:600px; border-radius:10px; margin-top:20px;">
+</div>
+
+<section class="fade">
+<h2>About Me</h2>
+<div class="card">
+<p>
+Cloud and DevOps-focused engineer with hands-on experience in AWS, Docker, and CI/CD tools. 
+I have worked on real-world cloud-based systems involving automation, infrastructure provisioning, and deployment.
+
+I completed my MCA in Cloud Computing and gained practical experience through a DevOps internship where I worked with Terraform, Jenkins, and AWS services.
+
+Currently preparing for cloud engineering roles in Japan while improving Japanese communication (N3 level).
+</p>
+</div>
 </section>
 
-<section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>AWS</span>
-    <span>Docker</span>
-    <span>Git</span>
-    <span>Jenkins</span>
-    <span>Terraform</span>
-    <span>Python</span>
-  </div>
+<section class="fade">
+<h2>Technical Skills</h2>
+<div class="card skills">
+
+<p><strong>Cloud & DevOps</strong></p>
+<span>AWS (EC2, S3, RDS, IAM)</span>
+<span>Terraform (Infrastructure as Code)</span>
+<span>Ansible (Configuration Management & Automation)</span>
+<span>Jenkins (CI/CD Automation)</span>
+<span>Docker (Containerization)</span>
+
+<p><strong>Programming</strong></p>
+<span>Python</span>
+
+<p><strong>Tools & Systems</strong></p>
+<span>Git</span>
+<span>Linux</span>
+
+</div>
 </section>
 
-<section>
-  <h2>Projects</h2>
+<section class="fade">
+<h2>Projects</h2>
 
-  <div class="project">
-    <h3>Cloud Deployment Project</h3>
-    <p>
-      Built and deployed a containerized application using Docker and AWS EC2.
-      Implemented CI/CD pipeline using Jenkins.
-    </p>
-    <a href="#">GitHub Link</a>
-  </div>
+<div class="card">
+<h3>Multi-Modal E-commerce Product Classifier</h3>
+<ul>
+<li>Built an AI-based classifier using CLIP model</li>
+<li>Classifies products using image and text inputs</li>
+<li>Developed interactive UI using Streamlit</li>
+<li>Improved product categorization efficiency</li>
+</ul>
+<p><strong>Tech:</strong> Python, CLIP, PyTorch, Streamlit</p>
+<a href="#">https://github.com/Dinodragneel25/Multi-Modal-E-commerce-Product-Classifier-Using-CLIP.git</a>
+</div>
 
-  <div class="project">
-    <h3>Web Application Project</h3>
-    <p>
-      Developed a simple web application and improved UI and functionality.
-    </p>
-    <a href="#">GitHub Link</a>
-  </div>
+<div class="card">
+<h3>Blood Bank with Philanthropic Matchmaker (Cloud-Based System)</h3>
+<ul>
+<li>Designed a cloud-based system for donor-recipient matching</li>
+<li>Implemented efficient filtering based on blood group and location</li>
+<li>Handled real-time request processing and data storage</li>
+<li>Focused on scalability and secure healthcare data handling</li>
+</ul>
+<p><strong>Tech:</strong> AWS, Cloud Architecture, Database Systems</p>
+<a href="#">https://github.com/Dinodragneel25/Blood-bank-with-Philanthropic-matchmaker-in-cloud-computing.git</a>
+</div>
 
 </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email:giftlindanielgiftlindaniel@gmail.com</p>
-  <p>GitHub: <a href="#">https://github.com/yourprofile</a></p>
+<section class="fade">
+<h2>Experience</h2>
+<div class="card">
+<p><strong>DevOps Intern</strong></p>
+<ul>
+<li>Worked on AWS infrastructure provisioning</li>
+<li>Automated deployments using Terraform</li>
+<li>Configured systems using Ansible</li>
+<li>Integrated CI/CD pipelines using Jenkins</li>
+</ul>
+</div>
+</section>
+
+<section class="fade">
+<h2>Education</h2>
+<div class="card">
+<p>MCA – Cloud Computing</p>
+</div>
+</section>
+
+<section class="fade">
+<h2>Currently Learning</h2>
+<div class="card">
+<ul>
+<li>AWS advanced services</li>
+<li>CI/CD pipelines</li>
+<li>Japanese (N3 Level)</li>
+</ul>
+</div>
+</section>
+
+<section class="fade">
+<h2>Contact</h2>
+<div class="card">
+<p>Email: your-email@example.com</p>
+<p>GitHub: <a href="#">https://github.com/yourprofile</a></p>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 Dino</p>
+<p>© 2026 Dino</p>
 </footer>
 
 </body>
