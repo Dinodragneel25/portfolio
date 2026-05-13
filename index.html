@@ -348,354 +348,53 @@ footer{
 
   </div>
 </section>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Dino Giftlin Daniel | Cloud & DevOps Engineer</title>
+<!-- Contact -->
+<section class="fade">
+  <h2>Contact</h2>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+  <div class="card">
 
-body{
-  font-family:'Segoe UI',sans-serif;
-  background:#0f172a;
-  color:#e2e8f0;
-  line-height:1.6;
-  scroll-behavior:smooth;
-}
+    <p>
+      Email:
+      <a href="mailto:giftlindanielgiftlindaniel@gmail.com">
+        giftlindanielgiftlindaniel@gmail.com
+      </a>
+    </p>
 
-/* Fade Animation */
-.fade{
-  opacity:0;
-  transform:translateY(20px);
-  transition:all 1s ease;
-}
+  </div>
+</section>
 
-.fade.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* Header */
-header{
-  text-align:center;
-  padding:80px 20px 40px;
-}
-
-header h1{
-  font-size:3rem;
-  margin-bottom:10px;
-}
-
-header p{
-  font-size:1.2rem;
-  color:#94a3b8;
-}
-
-/* Sections */
-section{
-  max-width:1000px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-h2{
-  border-left:5px solid #38bdf8;
-  padding-left:10px;
-  margin-bottom:20px;
-  font-size:1.6rem;
-}
-
-/* Cards */
-.card{
-  background:#1e293b;
-  padding:25px;
-  border-radius:12px;
-  margin-bottom:20px;
-  transition:0.3s ease;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-.card:hover{
-  transform:translateY(-5px);
-}
-
-/* Skills */
-.skills span{
-  display:inline-block;
-  background:#334155;
-  padding:8px 12px;
-  margin:6px;
-  border-radius:6px;
-  font-size:0.9rem;
-}
-
-/* Links */
-a{
-  color:#38bdf8;
-  text-decoration:none;
-}
-
-a:hover{
-  text-decoration:underline;
-}
-
-/* Hero Image */
-.hero-img{
-  width:90%;
-  max-width:650px;
-  border-radius:12px;
-  margin-top:20px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.4);
-}
-
-/* Footer */
-footer{
-  text-align:center;
-  padding:20px;
-  color:#64748b;
-}
-
-/* Responsive */
-@media(max-width:768px){
-
-  header h1{
-    font-size:2rem;
-  }
-
-  header p{
-    font-size:1rem;
-  }
-
-  h2{
-    font-size:1.3rem;
-  }
-
-  .card{
-    padding:18px;
-  }
-}
-</style>
-
-</head>
-
-<body>
-
-<!-- Header -->
-<header class="fade">
-  <h1>Dino Giftlin Daniel</h1>
+<!-- Footer -->
+<footer>
   <p>
-    Cloud & DevOps Engineer | AWS | Docker | CI/CD | Building Scalable Applications
+    © <span id="year"></span> Dino Giftlin Daniel
   </p>
-</header>
+</footer>
 
-<!-- Hero Image -->
-<div style="text-align:center;" class="fade">
-  <img 
-    src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" 
-    alt="Cloud Computing"
-    class="hero-img"
-  />
-</div>
+<!-- JavaScript -->
+<script>
 
-<!-- About -->
-<section class="fade">
-  <h2>About Me</h2>
+/* Dynamic Footer Year */
+document.getElementById("year").innerText =
+new Date().getFullYear();
 
-  <div class="card">
-    <p>
-      Cloud and DevOps-focused engineer with hands-on experience in AWS, Docker, and CI/CD tools.
-      I have worked on cloud-based systems involving automation, infrastructure provisioning,
-      deployment, and scalable application management.
-    </p>
+/* Scroll Fade Animation */
+const fadeElements = document.querySelectorAll('.fade');
 
-    <br>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
 
-    <p>
-      I completed my MCA in Cloud Computing and gained practical experience through a DevOps internship
-      where I worked with Terraform, Jenkins, and AWS services.
-    </p>
+fadeElements.forEach((el)=>{
+  observer.observe(el);
+});
 
-    <br>
+</script>
 
-    <p>
-      Currently preparing for cloud engineering roles in Japan while improving Japanese communication
-      skills (JLPT N3 level).
-    </p>
-  </div>
-</section>
-
-<!-- Skills -->
-<section class="fade">
-  <h2>Technical Skills</h2>
-
-  <div class="card skills">
-
-    <p><strong>Cloud & DevOps</strong></p>
-
-    <span>AWS (EC2, S3, RDS, IAM)</span>
-    <span>Terraform</span>
-    <span>Ansible</span>
-    <span>Jenkins</span>
-    <span>Docker</span>
-
-    <br><br>
-
-    <p><strong>Programming</strong></p>
-
-    <span>Python</span>
-
-    <br><br>
-
-    <p><strong>Tools & Systems</strong></p>
-
-    <span>Git</span>
-    <span>Linux</span>
-
-  </div>
-</section>
-
-<!-- Projects -->
-<section class="fade">
-  <h2>Projects</h2>
-
-  <!-- Project 1 -->
-  <div class="card">
-
-    <h3>Multi-Modal E-commerce Product Classifier</h3>
-
-    <br>
-
-    <ul>
-      <li>Built an AI-based classifier using the CLIP model</li>
-      <li>Classifies products using image and text inputs</li>
-      <li>Developed an interactive UI using Streamlit</li>
-      <li>Improved product categorization efficiency</li>
-    </ul>
-
-    <br>
-
-    <p>
-      <strong>Tech:</strong>
-      Python, CLIP, PyTorch, Streamlit
-    </p>
-
-    <br>
-
-    <a 
-      href="https://github.com/Dinodragneel25/Multi-Modal-E-commerce-Product-Classifier-Using-CLIP"
-      target="_blank"
-    >
-      View GitHub Repository
-    </a>
-
-  </div>
-
-  <!-- Project 2 -->
-  <div class="card">
-
-    <h3>Blood Bank with Philanthropic Matchmaker</h3>
-
-    <br>
-
-    <ul>
-      <li>Designed a cloud-based donor-recipient matching system</li>
-      <li>Implemented filtering based on blood group and location</li>
-      <li>Handled real-time request processing and secure data storage</li>
-      <li>Focused on scalability and healthcare data management</li>
-    </ul>
-
-    <br>
-
-    <p>
-      <strong>Tech:</strong>
-      AWS, Cloud Architecture, Database Systems
-    </p>
-
-    <br>
-
-    <a 
-      href="https://github.com/Dinodragneel25/Blood-bank-with-Philanthropic-matchmaker-in-cloud-computing"
-      target="_blank"
-    >
-      View GitHub Repository
-    </a>
-
-  </div>
-
-</section>
-
-<!-- Experience -->
-<section class="fade">
-  <h2>Experience</h2>
-
-  <div class="card">
-
-    <p><strong>DevOps Intern</strong></p>
-
-    <br>
-
-    <ul>
-      <li>Worked on AWS infrastructure provisioning</li>
-      <li>Automated deployments using Terraform</li>
-      <li>Configured systems using Ansible</li>
-      <li>Integrated CI/CD pipelines using Jenkins</li>
-    </ul>
-
-  </div>
-</section>
-
-<!-- Education -->
-<section class="fade">
-  <h2>Education</h2>
-
-  <div class="card">
-    <p><strong>MCA – Cloud Computing</strong></p>
-  </div>
-</section>
-
-<!-- Learning -->
-<section class="fade">
-  <h2>Currently Learning</h2>
-
-  <div class="card">
-    <ul>
-      <li>AWS Advanced Services</li>
-      <li>CI/CD Pipelines</li>
-      <li>Japanese (JLPT N3 Level)</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Links -->
-<section class="fade">
-  <h2>Links</h2>
-
-  <div class="card">
-
-    <p>
-      GitHub:
-      <a href="https://github.com/Dinodragneel25" target="_blank">
-        github.com/Dinodragneel25
-      </a>
-    </p>
-
-    <br>
-
-    <p>
-      LinkedIn:
-      <a href="#" target="_blank">
-        Add Your LinkedIn Profile
-      </a>
-    </p>
-
-  </div>
-</section>
-
+</body>
+</html>
